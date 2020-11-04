@@ -55,7 +55,10 @@ public class Hero : MonoBehaviour
 
     private void Draw()
     {
-        lineRenderer.SetPosition(0, transform.position);
-        lineRenderer.SetPosition(1, point[nextPos].position);
+        if (nextPos != 3)
+        {
+            lineRenderer.SetPosition(0, transform.position);
+            lineRenderer.SetPosition(1, point[nextPos].position);
+        }
     }
 }
